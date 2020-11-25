@@ -1,7 +1,9 @@
 {
   "private": "true",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "stylelint": "stylelint \"src/scss/**/*.scss\" --syntax scss",
+    "editorconfig": "editorconfig-checker --exclude '.git|node_modules|.DS_Store'",
+    "test": "npm run stylelint && npm run editorconfig"
   },
   "repository": {
     "type": "git",
@@ -12,5 +14,9 @@
     "> 1%",
     "maintained node versions",
     "not dead"
-  ]
+  ],
+  "devDependencies": {
+    "editorconfig-checker": "^3.3.0",
+    "stylelint": "^13.8.0"
+  }
 }
